@@ -1,12 +1,14 @@
 #!/bin/bash
 
 echo "THIS PACKAGE WILL ASSIST IN ERASING YOUR DEVICE, YOU AGREE TO USE THIS AT YOUR OWN RISK. THANKS FOR THE METHOD /u/changemylife99."
-echo "If you would like to quit, exit Cydia NOW!"
-sleep 5
+echo "Thanks to contributions from ipadkid358 and thebeastgamer25"
+echo "If you would like to quit, exit Cydia NOW! I have purpousefully added a 10 second hang time for you to exit if needed. Use this time wisley."
+sleep 10
 
 echo "Updating your repos. This is needed to install MTerminal"
 apt-get update
 
+echo "Installing MTerminal."
 apt-get install com.officialscheduler.mterminal
 echo "Done! Moving on to the actual erase!"
 
@@ -15,8 +17,7 @@ echo "THIS IS YOUR LAST CHANCE TO CLOSE CYDIA WITH NO ERASING DONE. YOU HAVE 5 S
 sleep 5
 
 echo "Starting erase..."
-cd /
-rm .installed_yaluX
+rm /.installed_yaluX
 echo "Removed Yalu file."
 
 cd /var/mobile/
@@ -123,11 +124,18 @@ rm -R Boxy
 rm -R AppCake
 
 echo "Removing stashed tweaks..."
-cd /var/
-rm stash
-
 cd /var/db/
 rm -R stash
 
-echo "Done!"
+echo "Done removing stashed tweaks. Removing Cydia Substrate..."
+apt-get --yes remove mobilesubstrate
+echo "Removed mobilesubstrate. DO NOT RESPRING, I REPEAT, DO NOT RESPRING. YOU HAVE BEEN WARNED."
+sleep 5
+
+echo "Removing any other temporary files caused by Cydia and other tweaks."
+rm /tmp/cydia.log
+echo "Just removed Cydia log. More could be added soon over time, but this shouldnt matter to much."
+
+tput bold
 echo "PLEASE GO TO SETTINGS IMMEDIATLEY AND USE ERASE ALL CONTENTS AND SETTINGS! THIS TWEAK ONLY DOES HALF OF THE WORK NEEDED. PLEASE DO THIS!"
+tput sgr0
