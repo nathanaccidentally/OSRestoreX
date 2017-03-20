@@ -2,7 +2,9 @@
 
 echo "THIS PACKAGE WILL ASSIST IN ERASING YOUR DEVICE, YOU AGREE TO USE THIS AT YOUR OWN RISK. THANKS FOR THE METHOD /u/changemylife99."
 echo "Thanks to contributions from ipadkid358 and thebeastgamer25"
+tput bold
 echo "If you would like to quit, exit Cydia NOW! I have purpousefully added a 10 second hang time for you to exit if needed. Use this time wisley."
+tput sgr0
 sleep 10
 
 echo "Updating your repos. This is needed to install MTerminal"
@@ -128,12 +130,14 @@ cd /var/db/
 rm -R stash
 
 echo "Done removing stashed tweaks. Removing Cydia Substrate..."
+echo "This should have dpkg remove all leftover tweak files and such."
 apt-get --yes remove mobilesubstrate
 echo "Removed mobilesubstrate. DO NOT RESPRING, I REPEAT, DO NOT RESPRING. YOU HAVE BEEN WARNED."
 sleep 5
 
 echo "Removing any other temporary files caused by Cydia and other tweaks."
 rm /tmp/cydia.log
+rm /tmp/flush.log
 echo "Just removed Cydia log. More could be added soon over time, but this shouldnt matter to much."
 
 tput bold
