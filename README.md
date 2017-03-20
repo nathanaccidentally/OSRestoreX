@@ -10,6 +10,8 @@ OSRestore does all the heavy lifting for you, so all you need to do is follow th
 2. Go into settings app and 'Erase all Content and Settings'
 3. Enjoy your freshly restored device on a Jailbreakable firmware!
 
+This will remove all tweaks from your device and reverse stashing by Coolstars Stashing for 9.3.3-10. It will do quite a bit to remove all un-needed files from your device to make for a fresher install as best as it can. It will also remove mobilesubstrate from your device so dpkg should handle removal of leftover files. (Including Anemone themes and their data.)
+
 ### DISCLAIMER:
 
 I have only tried this on iOS 10.2 and 10.1.1 and OSRestore may not be compatible with other firmwares. I am not responsible for any damage to your device.
