@@ -9,22 +9,21 @@ apt-get update
 apt-get install com.officialscheduler.mterminal
 
 echo "Starting erase..."
-cd /
-rm .installed_yaluX
-echo "Removed Yalu file."
+rm /.installed_yaluX
+echo "Removed Yalu file"
 
 cd /var/mobile/
 
 echo "Removing /var/mobile and it's contents..."
-rm -R Backups
-rm -R Containers
-rm -R Documents
-rm -R Downloads
-rm -R Media
-rm -R MobileSoftwareUpdate
+
+filecontent=(`ls | grep -v Library`)
+for t in "${filecontent[@]}"
+do
+rm $t
+done
 echo "Removed all contents except for Library from /var/mobile."
 
-echo "Removing the contents of /var/mobile/Library except for carrier settigs and important files..."
+echo "Removing the contents of /var/mobile/Library except for carrier settings and important files..."
 
 cd /var/mobile/Library/
 
@@ -116,8 +115,9 @@ rm stash
 
 cd /var/db/
 rm -R stash
-
+tput bold
 echo "Done!"
 echo "PLEASE GO TO SETTINGS IMMEDIATLEY AND USE ERASE ALL CONTENTS AND SETTINGS!"
 echo "PLEASE GO TO SETTINGS IMMEDIATLEY AND USE ERASE ALL CONTENTS AND SETTINGS!"
 echo "PLEASE GO TO SETTINGS IMMEDIATLEY AND USE ERASE ALL CONTENTS AND SETTINGS!"
+tput sgr0
