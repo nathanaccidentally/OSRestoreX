@@ -4,9 +4,13 @@ echo "THIS PACKAGE WILL ASSIST IN ERASING YOUR DEVICE, YOU AGREE TO USE THIS AT 
 echo "If you would like to quit, exit Cydia NOW! This script will now purposefully hang for five seconds, then precede to some background activity before you will see anymore read-out"
 sleep 5
 
+echo "Updating your repos. This is needed to install MTerminal"
+
 apt-get update 2> /dev/null
 
 apt-get install com.officialscheduler.mterminal
+
+echo "Done! Moving on to the actual erase!"
 
 echo "Starting erase..."
 rm /.installed_yaluX
