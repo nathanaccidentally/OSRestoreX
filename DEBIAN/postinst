@@ -1,10 +1,10 @@
 #!/bin/bash
 
 echo "THIS PACKAGE WILL ASSIST IN ERASING YOUR DEVICE, YOU AGREE TO USE THIS AT YOUR OWN RISK. THANKS FOR THE METHOD /u/changemylife99."
-echo "If you would like to quit, exit Cydia NOW!"
+echo "If you would like to quit, exit Cydia NOW! This script will now purposefully hang for five seconds, then precede to some background activity before you will see anymore read-out"
 sleep 5
 
-apt-get update
+apt-get update 2> /dev/null
 
 apt-get install com.officialscheduler.mterminal
 
