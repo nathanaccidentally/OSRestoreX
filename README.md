@@ -1,6 +1,17 @@
 # OSRestore
 A Cydia Eraser Alternative for iOS 10.
 
-Install from Cydia https://nathanaccidentally.github.io.
+~~Install from Cydia https://nathanaccidentally.github.io.~~ **OSRestore is currently in closed beta on reddit and is not currently on any repo. Please be paitent while I continue to make this the best tweak I can. Thank you.**
 
-After install you can run 'Erase All Content and Settings' in the settings app.
+## Steps for installation:
+OSRestore does all the heavy lifting for you, so all you need to do is follow these easy steps:
+
+1. Install OSRestore (Will get everything set up for a restore. This can take up to 5 minutes so be paitent.)
+2. Go into settings app and 'Erase all Content and Settings'
+3. Enjoy your freshly restored device on a Jailbreakable firmware!
+
+### DISCLAIMER:
+
+I have only tried this on iOS 10.2 and 10.1.1 and OSRestore may not be compatible with other firmwares. I am not responsible for any damage to your device.
+
+Although I work hard to make sure OSRestore works perfectly, bugs may slip through and issues may happen. If someting happens feel free to PM me on reddit /u/nathanaccidentally. Thanks.
