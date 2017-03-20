@@ -138,6 +138,7 @@ sleep 5
 echo "Removing any other temporary files caused by Cydia and other tweaks."
 rm /tmp/cydia.log
 rm /tmp/flush.log
+rm -R /Library/Themes
 echo "Just removed Cydia log. More could be added soon over time, but this shouldnt matter to much."
 
 tput bold
