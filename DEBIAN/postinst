@@ -58,6 +58,12 @@ apt-get --yes remove mobilesubstrate
 echo "Removed mobilesubstrate. DO NOT RESPRING, I REPEAT, DO NOT RESPRING. YOU HAVE BEEN WARNED."
 sleep 5
 
+echo "Removing popular Jailbreak Applications (The not dangerous way)"
+
+cd /Applications
+
+echo "Finish later."
+
 echo "Removing any other temporary files caused by Cydia and other tweaks."
 rm /tmp/cydia.log
 rm /tmp/flush.log
