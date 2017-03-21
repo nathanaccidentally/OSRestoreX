@@ -59,10 +59,10 @@ echo "Removed mobilesubstrate. DO NOT RESPRING, I REPEAT, DO NOT RESPRING. YOU H
 sleep 5
 
 echo "Removing popular Jailbreak Applications (The not dangerous way)"
-
 cd /Applications
 
-echo "Finish later."
+rm -R Activator.app
+rm -R Cydia.app
 
 echo "Removing any other temporary files caused by Cydia and other tweaks."
 rm /tmp/cydia.log
