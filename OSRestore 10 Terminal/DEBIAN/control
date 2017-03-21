@@ -3,7 +3,7 @@ Name: OSRestore 10 Terminal
 Version: 1.0
 Architecture: iphoneos-arm
 Pre-Depends: dpkg (>= 1.13.25-5), org.coolstar.stash933
-Description: A Cydia Eraser alternative by /u/changemylife99 and /u/nathanaccidentally (some code cleanup creds to ipad_kid)
+Description: A semi-restore alternative by /u/changemylife99 and /u/nathanaccidentally (some code cleanup creds to ipad_kid)
 Maintainer: nathanaccidentally <nathanaccidentally@gmail.com>
 Author: nathanaccidentally <nathanaccidentally@gmail.com>
 Section: System
