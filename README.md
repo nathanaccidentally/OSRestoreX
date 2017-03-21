@@ -23,4 +23,4 @@ I have only tried this on iOS 10.2 and 10.1.1 and OSRestore may not be compatibl
 
 Although I work hard to make sure OSRestore works perfectly, bugs may slip through and issues may happen. If someting happens feel free to PM me on reddit /u/nathanaccidentally. Thanks.
 
-**Thanks to contributions from ipadkid358 and thebeastgamer25.**
+**Thanks to contributions from ipad_kid (great work by the way) and thebeastgamer25.**
