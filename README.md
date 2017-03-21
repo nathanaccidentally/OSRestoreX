@@ -1,5 +1,5 @@
-# OSRestore 10
-A Cydia Eraser Alternative for iOS 10.
+# OSRestoreX and Termianl
+A semi-restore Alternative for iOS 10.
 
 ~~Install from Cydia https://nathanaccidentally.github.io.~~ **OSRestore is currently in closed beta on reddit and is not currently on any repo. Please be paitent while I continue to make this the best tweak I can. Thank you.**
 
