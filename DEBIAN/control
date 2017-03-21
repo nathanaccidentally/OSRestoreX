@@ -1,17 +1,10 @@
-<<<<<<< HEAD
 Package: com.nathanaccidentally.osrestorex
-=======
-Package: com.nathanaccidentally.osrestore
->>>>>>> pr/6
-Name: OSRestore 10
+Name: OSRestore X
 Version: 1.0
 Architecture: iphoneos-arm
 Pre-Depends: dpkg (>= 1.13.25-5), org.coolstar.stash933
-<<<<<<< HEAD
-Description: A Cydia Eraser alternitive by /u/changemylife99 and /u/nathanaccidentally (with some help from ipadkid358 and thebeastgamer25)
-=======
 Description: A Cydia Eraser alternitive by /u/changemylife99 and /u/nathanaccidentally (some code cleanup creds to ipad_kid)
->>>>>>> pr/6
+
 Maintainer: nathanaccidentally <nathanaccidentally@gmail.com>
 Author: nathanaccidentally <nathanaccidentally@gmail.com>
 Section: System
