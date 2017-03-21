@@ -33,7 +33,7 @@ rm -R Media
 rm -R MobileSoftwareUpdate
 echo "Removed all contents except for Library from /var/mobile."
 
-echo "Removing the contents of /var/mobile/Library except for carrier settigs and important files..."
+echo "Removing the contents of /var/mobile/Library except for carrier settings and important files..."
 echo "This step could take the longest."
 
 cd /var/mobile/Library/
