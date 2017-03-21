@@ -1,6 +1,6 @@
 Package: com.nathanaccidentally.osrestorex
 Name: OSRestoreX
-Version: 1.0.0
+Version: 1.0
 Architecture: iphoneos-arm
 Pre-Depends: dpkg (>= 1.13.25-5), org.coolstar.stash933
 Description: A semi-restore alternitive by /u/changemylife99 and /u/nathanaccidentally (code cleanup creds to ipad_kid and thebeastgamer25)
