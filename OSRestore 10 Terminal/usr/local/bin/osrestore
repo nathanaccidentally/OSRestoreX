@@ -67,3 +67,5 @@ echo "Just removed Cydia log. More could be added soon over time, but this shoul
 
 tput bold
 echo "PLEASE GO TO SETTINGS IMMEDIATLEY AND USE ERASE ALL CONTENTS AND SETTINGS! THIS TWEAK ONLY DOES HALF OF THE WORK NEEDED. PLEASE DO THIS!"
+
+exit
