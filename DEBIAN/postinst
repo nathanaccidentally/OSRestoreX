@@ -8,17 +8,15 @@ echo "If you would like to quit, exit Cydia NOW! I have purpousefully added a 10
 tput sgr0
 sleep 10
 
-test "dpkg --get-selections | grep -v deinstall | grep com.officialscheduler.mterminal" = "" && {
-echo "Updating your repos. This is needed to install MTerminal"
 test "cat /etc/apt/sources.list.d/* | grep http://apt.thebigboss.org/repofiles/cydia/" = "" && { 
+echo "Updating your repos. This is needed to install MTerminal"
 echo deb http://apt.thebigboss.org/repofiles/cydia/ stable main >> cydia.list
 apt-get update
-
-echo "Installing MTerminal."
-apt-get install com.officialscheduler.mterminal
-echo "Done! Moving on to the actual erase!"
-   }
 }
+echo "Installing MTerminal. This is to ensure Stashings is properly triggered."
+test "dpkg --get-selections | grep -v deinstall | grep com.officialscheduler.mterminal" = "" && apt-get install com.officialscheduler.mterminal
+test "dpkg --get-selections | grep -v deinstall | grep com.officialscheduler.mterminal" != "" && apt-get install --reinstall com.officialscheduler.mterminal
+echo "Done! Moving on to the actual erase!"
 
 echo "THIS IS YOUR LAST CHANCE TO CLOSE CYDIA WITHOUT ERASING. YOU HAVE 5 SECONDS."
 sleep 5
@@ -52,8 +50,7 @@ rm -r "$t"
 done
 
 echo "Removing stashed tweaks..."
-cd /var/db/
-rm -R stash
+rm -r /var/db/stash
 
 echo "Done removing stashed tweaks. Removing Cydia Substrate..."
 echo "This should have dpkg remove all leftover tweak files and such."
