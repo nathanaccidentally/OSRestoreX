@@ -42,7 +42,7 @@ cd /var/mobile/Library
 
 echo "Moved to /var/mobile/Library. Final erase starting."
 
-filecontent=(`ls | grep -v Carrier | grep -v Operator`)
+filecontent=(`ls | grep -v Carrier | grep -v Operator | grep -v Preferences`)
 for t in "${filecontent[@]}"
 do
 rm -r "$t"
