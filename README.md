@@ -13,7 +13,7 @@ OSRestore does all the heavy lifting for you, so all you need to do is follow th
 This will remove all tweaks from your device and reverse stashing by Coolstars Stashing for 9.3.3-10. It will do quite a bit to remove all un-needed files from your device to make for a fresher install as best as it can. It will also remove mobilesubstrate from your device so dpkg should handle removal of leftover files. (Including Anemone themes and their data.)
 
 ## Command Line Utility:
-Also on this page is command line utility; This can be run over SSH or via MTerminal. It is exactly the same as the default package but it can be triggered when you'd prefer rather than having to to it immideatley.
+Also on this page is command line utility; This can be run over SSH or via MTerminal. It is exactly the same as the default package but it can be triggered when you'd prefer rather than having to run it immideatley.
 
 **But be warned:** This can be triggered by any ol' Cydia tweak with a postinst script so I'd be **VERY** careful if you install this although I reccomend you don't. You can trigger OSRestore by typing `osrestore` from the command line.
 
