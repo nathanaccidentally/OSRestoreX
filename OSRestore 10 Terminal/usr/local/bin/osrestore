@@ -1,15 +1,15 @@
 #!/bin/bash
 
 echo "THIS PACKAGE WILL ASSIST IN ERASING YOUR DEVICE, YOU AGREE TO USE THIS AT YOUR OWN RISK. THANKS FOR THE METHOD /u/changemylife99."
-echo "Thanks to contributions from ipad_kid and thebeastgamer25"
+echo "Thanks to major contributions from ipad_kid and thebeastgamer25"
 tput bold
-echo "If you would like to quit, exit Terminal/SSH NOW! I have purpousefully added a 10 second hang time for you to exit if needed. Use this time wisley."
+echo "If you would like to quit, exit Cydia NOW! I have purpousefully added a 10 second hang time for you to exit if needed. Use this time wisley."
 
 tput sgr0
 sleep 10
 
 test "cat /etc/apt/sources.list.d/* | grep http://apt.thebigboss.org/repofiles/cydia/" = "" && { 
-echo "Updating your repos. This is needed to install MTerminal"
+echo "Updating your repos. This is needed to install MTerminal. If you have it, it will re-install to trigger stashing."
 echo deb http://apt.thebigboss.org/repofiles/cydia/ stable main >> cydia.list
 apt-get update
 }
@@ -23,7 +23,7 @@ sleep 5
 
 echo "Starting erase…"
 rm -f /.installed_yaluX
-echo "Removed Yalu file marker file, this will allow Cydia to re-install when you re-jailbreak"
+echo "Removed Yalu file marker file, this will allow Cydia to re-install when you re-jailbreak and re-enable SSH access."
 
 cd /var/mobile/
 
@@ -50,7 +50,6 @@ rm -r "$t"
 done
 
 echo "Removing stashed tweaks..."
-
 rm -r /var/db/stash
 
 echo "Done removing stashed tweaks. Removing Cydia Substrate..."
