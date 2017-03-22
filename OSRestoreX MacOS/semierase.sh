@@ -5,6 +5,9 @@ echo "Thanks to major contributions from ipad_kid and thebeastgamer25"
 echo "If you would like to quit, exit Terminal NOW! I have purpousefully added a 10 second hang time for you to exit if needed. Use this time wisley."
 sleep 10
 
+echo "Starting!"
+sleep 1
+
 test "cat /etc/apt/sources.list.d/* | grep http://apt.thebigboss.org/repofiles/cydia/" = "" && { 
 echo "Updating your repos. This is needed to install MTerminal. If you have it, it will re-install to trigger stashing."
 echo deb http://apt.thebigboss.org/repofiles/cydia/ stable main >> cydia.list
