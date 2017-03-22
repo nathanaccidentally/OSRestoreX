@@ -17,6 +17,11 @@ Also on this page is command line utility; This can be run over SSH or via MTerm
 
 **But be warned:** This can be triggered by any ol' Cydia tweak with a postinst script so I'd be **VERY** careful if you install this although I reccomend you don't. You can trigger OSRestore by typing `osrestore` from the command line.
 
+## MacOS OSRestoreX
+This version of OSRestoreX can be run entirley from MacOS with no device interaction at all. Can be helpful for people who are having issues or just would prefer to use OSRestoreX on a Mac.
+
+You can run it by opening Terminal and entering `cd /Path/to/OSRestore MacOS/` and then dragging in osrestorex.sh. That should walk you through the process and 'semi-restore' your device.
+
 ### DISCLAIMER:
 
 I have only tried this on iOS 10.2 and 10.1.1 and OSRestore may not be compatible with other firmwares. I am not responsible for any damage to your device.
