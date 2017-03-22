@@ -72,6 +72,7 @@ rm -R Activator.app
 rm -R Anemone.app
 rm -R BatteryLife.app
 rm -R CocoaTop.app
+rm -R iCleaner.app
 echo "Tried removing some popular Jailbreak apps installred to root."
 
 echo "Removing any other temporary files caused by Cydia and other tweaks."
