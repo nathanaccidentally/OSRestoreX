@@ -1,9 +1,9 @@
 #!/bin/bash
 
-echo "OSRESTOREX WILL ASSIST IN ERASING YOUR DEVICE, YOU AGREE TO USE THIS AT YOUR OWN RISK. THANKS FOR THE METHOD /u/changemylife99."
+echo "OSRESTOREXTERM WILL ASSIST IN ERASING YOUR DEVICE, YOU AGREE TO USE THIS AT YOUR OWN RISK. THANKS FOR THE METHOD /u/changemylife99."
 echo "Thanks to major contributions from ipad_kid and thebeastgamer25"
 tput bold
-echo "If you would like to quit, exit Cydia NOW! I have purpousefully added a 10 second hang time for you to exit if needed. Use this time wisley."
+echo "If you would like to quit, exit TERMINAL/SSH NOW! I have purpousefully added a 10 second hang time for you to exit if needed. Use this time wisley."
 
 tput sgr0
 sleep 10
@@ -60,6 +60,7 @@ sleep 5
 
 echo "Removing dropbear to disable SSH."
 cd /usr/local/bin
+
 rm dropbear
 rm dropbearconvert
 rm dropbearkey
@@ -80,14 +81,17 @@ fi
 done
 echo "This should have removed all jailbreak applications except Cydia"
 
+
 echo "Removing any other temporary files caused by Cydia and other tweaks."
 rm /tmp/cydia.log
 rm /tmp/flush.log
+
 rm -r /Library/Themes
 echo "Just removed Cydia log. More could be added soon over time, but this shouldnt matter too much."
 
 echo "Running final step, removing Cydia."
 rm -r /Applications/Cydia.app
+
 echo "Removed Cydia.app!"
 
 tput bold

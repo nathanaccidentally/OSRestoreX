@@ -83,11 +83,13 @@ echo "This should have removed all jailbreak applications except Cydia"
 echo "Removing any other temporary files caused by Cydia and other tweaks."
 rm /tmp/cydia.log
 rm /tmp/flush.log
+
 rm -r /Library/Themes
 echo "Just removed Cydia log. More could be added soon over time, but this shouldnt matter too much."
 
 echo "Running final step, removing Cydia."
 rm -r /Applications/Cydia.app
+
 echo "Removed Cydia.app!"
 
 tput bold
