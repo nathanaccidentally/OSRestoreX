@@ -66,6 +66,7 @@ rm dropbearkey
 rm /Library/LaunchDeamons/dropbear.plist
 echo "Finished removing dropbear."
 cd
+
 echo "Removing jailbreak applications, this can take a very long time depending on how many tweaks you have installed. Thanks to /u/ipad_kid for the script for this."
 cd /Applications
 for t in `ls`
