@@ -1,7 +1,7 @@
 # OSRestoreX and Termianl
 A semi-restore Alternative for iOS 10.
 
-~~Install from Cydia https://nathanaccidentally.github.io.~~ **OSRestore is currently in closed beta on reddit and is not currently on any repo. Please be paitent while I continue to make this the best tweak I can. Thank you.**
+Install from Cydia https://repo.jailbreakhub.org.
 
 ## Steps for installation:
 OSRestore does all the heavy lifting for you, so all you need to do is follow these easy steps:
