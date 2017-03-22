@@ -60,28 +60,38 @@ sleep 5
 
 echo "Removing dropbear to disable SSH."
 cd /usr/local/bin
-rm -R dropbear
-rm -R dropbearconvert
-rm -R dropbearkey
-rm -R /Library/LaunchDeamons/dropbear.plist
-echo "Finished removing dropbear."
 
-echo "Removing popular Jailbreak Applications (The not dangerous way. This just guesses and attempts to remove some popular apps.)"
+rm dropbear
+rm dropbearconvert
+rm dropbearkey
+rm /Library/LaunchDeamons/dropbear.plist
+echo "Finished removing dropbear."
+cd
+echo "Removing jailbreak applications, this can take a very long time depending on how many tweaks you have installed"
 cd /Applications
-rm -R Activator.app
-rm -R Anemone.app
-rm -R BatteryLife.app
-rm -R CocoaTop.app
-echo "Tried removing some popular Jailbreak apps installred to root."
+for t in `ls`
+do
+if dpkg -S $t > /dev/null 2> /dev/null
+then
+test "$t" != "Cydia.app" && {
+echo Removing $t
+rm -r $t
+}
+fi
+done
+echo "This should have removed all jailbreak applications except Cydia"
+
 
 echo "Removing any other temporary files caused by Cydia and other tweaks."
 rm /tmp/cydia.log
 rm /tmp/flush.log
-rm -R /Library/Themes
+
+rm -r /Library/Themes
 echo "Just removed Cydia log. More could be added soon over time, but this shouldnt matter too much."
 
 echo "Running final step, removing Cydia."
-rm -R Cydia.app
+rm -r /Applications/Cydia.app
+
 echo "Removed Cydia.app!"
 
 tput bold
