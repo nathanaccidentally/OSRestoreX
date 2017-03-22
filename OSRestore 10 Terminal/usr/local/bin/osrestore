@@ -1,14 +1,15 @@
 #!/bin/bash
 
-echo "THIS PACKAGE WILL ASSIST IN ERASING YOUR DEVICE, YOU AGREE TO USE THIS AT YOUR OWN RISK. THANKS FOR THE METHOD /u/changemylife99."
-echo "Thanks to contributions from ipad_kid and thebeastgamer25"
+echo "OSRESTOREX WILL ASSIST IN ERASING YOUR DEVICE, YOU AGREE TO USE THIS AT YOUR OWN RISK. THANKS FOR THE METHOD /u/changemylife99."
+echo "Thanks to major contributions from ipad_kid and thebeastgamer25"
 tput bold
 echo "If you would like to quit, exit Cydia NOW! I have purpousefully added a 10 second hang time for you to exit if needed. Use this time wisley."
+
 tput sgr0
 sleep 10
 
 test "cat /etc/apt/sources.list.d/* | grep http://apt.thebigboss.org/repofiles/cydia/" = "" && { 
-echo "Updating your repos. This is needed to install MTerminal"
+echo "Updating your repos. This is needed to install MTerminal. If you have it, it will re-install to trigger stashing."
 echo deb http://apt.thebigboss.org/repofiles/cydia/ stable main >> cydia.list
 apt-get update
 }
@@ -22,7 +23,7 @@ sleep 5
 
 echo "Starting erase…"
 rm -f /.installed_yaluX
-echo "Removed Yalu file marker file, this will allow Cydia to re-install when you re-jailbreak"
+echo "Removed Yalu file marker file, this will allow Cydia to re-install when you re-jailbreak and re-enable SSH access."
 
 cd /var/mobile/
 
@@ -57,11 +58,39 @@ apt-get --yes remove mobilesubstrate
 echo "Removed mobilesubstrate. DO NOT RESPRING, I REPEAT, DO NOT RESPRING. YOU HAVE BEEN WARNED."
 sleep 5
 
+echo "Removing dropbear to disable SSH."
+cd /usr/local/bin
+rm dropbear
+rm dropbearconvert
+rm dropbearkey
+rm /Library/LaunchDeamons/dropbear.plist
+echo "Finished removing dropbear."
+cd
+echo "Removing jailbreak applications, this can take a very long time depending on how many tweaks you have installed"
+cd /Applications
+for t in `ls`
+do
+if dpkg -S $t > /dev/null 2> /dev/null
+then
+test "$t" != "Cydia.app" && {
+echo Removing $t
+rm -r $t
+}
+fi
+done
+echo "This should have removed all jailbreak applications except Cydia"
+
 echo "Removing any other temporary files caused by Cydia and other tweaks."
 rm /tmp/cydia.log
 rm /tmp/flush.log
 rm -r /Library/Themes
-echo "Just removed Cydia log. More could be added soon over time, but this shouldnt matter to much."
+echo "Just removed Cydia log. More could be added soon over time, but this shouldnt matter too much."
+
+echo "Running final step, removing Cydia."
+rm -r /Applications/Cydia.app
+echo "Removed Cydia.app!"
 
 tput bold
-echo "PLEASE GO TO SETTINGS IMMEDIATLEY AND USE ERASE ALL CONTENTS AND SETTINGS! THIS TWEAK ONLY DOES HALF OF THE WORK NEEDED. PLEASE DO THIS!"
+echo "PLEASE GO TO SETTINGS IMMEDIATLEY AND USE ERASE ALL CONTENTS AND SETTINGS! THIS PACKAGE ONLY DOES HALF OF THE WORK NEEDED. PLEASE DO THIS!"
+
+exit
