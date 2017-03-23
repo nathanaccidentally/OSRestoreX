@@ -3,7 +3,7 @@
 echo "OSRESTOREX WILL ASSIST IN ERASING YOUR DEVICE, YOU AGREE TO USE THIS AT YOUR OWN RISK. THANKS FOR THE METHOD /u/changemylife99."
 echo "Thanks to major contributions from ipad_kid and thebeastgamer25"
 tput bold
-echo "If you would like to quit, exit Terminal/SSH NOW! I have purpousefully added a 10 second hang time for you to exit if needed. Use this time wisley."
+echo "If you would like to quit, exit Cydia NOW! I have purpousefully added a 10 second hang time for you to exit if needed. Use this time wisley."
 
 tput sgr0
 sleep 10
@@ -88,8 +88,7 @@ rm /tmp/flush.log
 rm -r /Library/Themes
 echo "Just removed Cydia log. More could be added soon over time, but this shouldnt matter too much."
 
-echo "Running final step, removing Cydia."
-rm -R /Applications/Cydia.app
+echo "Running final step, removing leftover Cydia files."
 rm -R /var/lib/cydia
 echo "Removed Cydia.app!"
 
