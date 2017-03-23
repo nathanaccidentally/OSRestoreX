@@ -1,12 +1,12 @@
 #!/bin/bash
 
-echo "OSRestoreX will assist in erasing your device. Thanks for the method /u/changemylife99!"
+echo "OSRESTOREX WILL ASSIST IN ERASING YOUR DEVICE, YOU AGREE TO USE THIS AT YOUR OWN RISK. THANKS FOR THE METHOD /u/changemylife99."
 echo "Thanks to major contributions from ipad_kid and thebeastgamer25"
-echo "If you would like to quit, exit Terminal NOW! I have purpousefully added a 10 second hang time for you to exit if needed. Use this time wisley."
-sleep 10
+tput bold
+echo "If you would like to quit, exit Cydia NOW! I have purpousefully added a 10 second hang time for you to exit if needed. Use this time wisley."
 
-echo "Starting!"
-sleep 1
+tput sgr0
+sleep 10
 
 test "cat /etc/apt/sources.list.d/* | grep http://apt.thebigboss.org/repofiles/cydia/" = "" && { 
 echo "Updating your repos. This is needed to install MTerminal. If you have it, it will re-install to trigger stashing."
@@ -18,7 +18,7 @@ test "dpkg --get-selections | grep -v deinstall | grep com.officialscheduler.mte
 test "dpkg --get-selections | grep -v deinstall | grep com.officialscheduler.mterminal" != "" && apt-get install --reinstall com.officialscheduler.mterminal
 echo "Done! Moving on to the actual erase!"
 
-echo "THIS IS YOUR LAST CHANCE TO CLOSE TERMINAL/SSH WITHOUT ERASING. YOU HAVE 5 SECONDS."
+echo "THIS IS YOUR LAST CHANCE TO CLOSE CYDIA WITHOUT ERASING. YOU HAVE 5 SECONDS."
 sleep 5
 
 echo "Starting erase…"
@@ -88,11 +88,11 @@ rm /tmp/flush.log
 rm -r /Library/Themes
 echo "Just removed Cydia log. More could be added soon over time, but this shouldnt matter too much."
 
-echo "Running final step, removing Cydia."
-rm -R /Applications/Cydia.app
+echo "Running final step, removing leftover Cydia files."
 rm -R /var/lib/cydia
 echo "Removed Cydia.app!"
 
+tput bold
 echo "PLEASE GO TO SETTINGS IMMEDIATLEY AND USE ERASE ALL CONTENTS AND SETTINGS! THIS PACKAGE ONLY DOES HALF OF THE WORK NEEDED. PLEASE DO THIS!"
 
 exit
