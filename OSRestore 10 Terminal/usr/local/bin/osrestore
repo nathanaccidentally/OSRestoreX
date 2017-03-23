@@ -54,7 +54,7 @@ rm -r /var/db/stash
 
 echo "Done removing stashed tweaks. Removing Cydia Substrate..."
 echo "This should have dpkg remove all leftover tweak files and such."
-apt-get --yes remove mobilesubstrate
+apt-get --yes remove --purge mobilesubstrate
 echo "Removed mobilesubstrate. DO NOT RESPRING, I REPEAT, DO NOT RESPRING. YOU HAVE BEEN WARNED."
 sleep 5
 
