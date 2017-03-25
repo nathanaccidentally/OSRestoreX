@@ -88,7 +88,8 @@ rm /tmp/flush.log
 rm -r /Library/Themes
 echo "Just removed Cydia log. More could be added soon over time, but this shouldnt matter too much."
 
-echo "Running final step, removing leftover Cydia files."
+echo "Running final step, removing Cydia and leftover files."
+em -R /Applications/Cydia.app
 rm -R /var/lib/cydia
 echo "Removed Cydia.app!"
 
