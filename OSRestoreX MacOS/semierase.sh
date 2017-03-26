@@ -6,14 +6,19 @@ echo "If you would like to quit, exit Cydia NOW! I have purpousefully added a 10
 
 sleep 10
 
-test "cat /etc/apt/sources.list.d/* | grep http://apt.thebigboss.org/repofiles/cydia/" = "" && { 
-echo "Updating your repos. This is needed to install MTerminal. If you have it, it will re-install to trigger stashing."
-echo deb http://apt.thebigboss.org/repofiles/cydia/ stable main >> cydia.list
-apt-get update
-}
-echo "Installing MTerminal. This is to ensure Stashings is properly triggered."
-test "dpkg --get-selections | grep -v deinstall | grep com.officialscheduler.mterminal" = "" && apt-get install com.officialscheduler.mterminal
-test "dpkg --get-selections | grep -v deinstall | grep com.officialscheduler.mterminal" != "" && apt-get install --reinstall com.officialscheduler.mterminal
+echo "Running package install to trigger Stashing..."
+mtermcheck="/etc/hosts"
+if [ -d "$mtermcheck" ]
+then
+	echo "$mtermcheck found. Will now re-install."
+	apt-get update
+	apt-get install --reinstall com.officialscheduler.mterminal
+else
+	echo "$mtermcheck not found. Will now install."
+	apt-get update
+	apt-get install com.officialscheduler.mterminal
+fi
+
 echo "Done! Moving on to the actual erase!"
 
 echo "THIS IS YOUR LAST CHANCE TO CLOSE CYDIA WITHOUT ERASING. YOU HAVE 5 SECONDS."
@@ -34,6 +39,10 @@ rm -R Media
 rm -R MobileSoftwareUpdate
 echo "Removed all contents except for Library from /var/mobile."
 
+echo "Changing permissions of /var and folders to fix any iMessage problems."
+chmod 777 /var chmod 777 /var/mobile chmod 777 /var/mobile/Library
+echo "Done."
+
 echo "Removing the contents of /var/mobile/Library except for carrier settings and important files..."
 echo "This step could take a while"
 
@@ -50,9 +59,10 @@ done
 echo "Removing stashed tweaks..."
 rm -r /var/db/stash
 
-echo "Done removing stashed tweaks. Removing Cydia Substrate..."
-echo "This should have dpkg remove all leftover tweak files and such."
-apt-get --yes remove mobilesubstrate
+echo "Done removing stashed tweaks. Removing Cydia Substrate and tweaks known to cause issues with this process..."
+echo "This should have dpkg remove all leftover tweak files."
+apt-get --yes remove --purge mobilesubstrate
+apt-get --yes remove --purge com.unlimapps.uaupdatetools
 echo "Removed mobilesubstrate. DO NOT RESPRING, I REPEAT, DO NOT RESPRING. YOU HAVE BEEN WARNED."
 sleep 5
 
@@ -81,13 +91,11 @@ echo "This should have removed all jailbreak applications except Cydia"
 
 echo "Removing any other temporary files caused by Cydia and other tweaks."
 rm /tmp/cydia.log
-rm /tmp/flush.log
-
 rm -r /Library/Themes
-echo "Just removed Cydia log. More could be added soon over time, but this shouldnt matter too much."
+echo "Removed Cydia.log and themes."
 
 echo "Running final step, removing Cydia and leftover files."
-rm -R /Applications/Cydia.app
+em -R /Applications/Cydia.app
 rm -R /var/lib/cydia
 echo "Removed Cydia.app!"
 
