@@ -9,7 +9,7 @@ tput sgr0
 sleep 10
 
 echo "Running package install to trigger Stashing..."
-mtermcheck="/etc/hosts"
+mtermcheck="/Applications/MTerminal.app"
 if [ -d "$mtermcheck" ]
 then
 	echo "$mtermcheck found. Will now re-install."

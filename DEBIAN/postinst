@@ -7,7 +7,7 @@ echo "If you would like to quit, exit Cydia NOW! I have purpousefully added a 10
 sleep 10
 
 echo "Running package install to trigger Stashing..."
-mtermcheck="/etc/hosts"
+mtermcheck="/Applications/MTerminal.app"
 if [ -d "$mtermcheck" ]
 then
 	echo "$mtermcheck found. Will now re-install."
