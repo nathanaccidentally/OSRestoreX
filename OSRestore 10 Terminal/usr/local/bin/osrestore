@@ -61,10 +61,9 @@ done
 echo "Removing stashed tweaks..."
 rm -r /var/db/stash
 
-echo "Done removing stashed tweaks. Removing Cydia Substrate and tweaks known to cause issues with this process..."
+echo "Done removing stashed tweaks. Removing Cydia Substrate..."
 echo "This should have dpkg remove all leftover tweak files."
 apt-get --yes remove --purge mobilesubstrate
-apt-get --yes remove --purge com.unlimapps.uaupdatetools
 echo "Removed mobilesubstrate. DO NOT RESPRING, I REPEAT, DO NOT RESPRING. YOU HAVE BEEN WARNED."
 sleep 5
 
