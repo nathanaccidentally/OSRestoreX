@@ -1,6 +1,6 @@
 Package: com.nathanaccidentally.osrestoreterminal
 Name: OSRestoreXTerm
-Version: 1.1
+Version: 1.2
 Architecture: iphoneos-arm
 Pre-Depends: dpkg (>= 1.13.25-5), org.coolstar.stash933, firmware (>= 10.0)
 Description: A semi-restore alternative by /u/changemylife99 and /u/nathanaccidentally (some code cleanup creds to ipad_kid)
