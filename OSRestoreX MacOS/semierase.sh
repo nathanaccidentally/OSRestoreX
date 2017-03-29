@@ -95,9 +95,8 @@ rm /tmp/cydia.log
 rm -r /Library/Themes
 echo "Removed Cydia.log and themes."
 
-echo "Running final step, removing Cydia and leftover files."
-em -R /Applications/Cydia.app
-rm -R /var/lib/cydia
+echo "Running final step, removing Cydia and leftover files."rem -r /Applications/Cydia.app
+rm -r /var/lib/cydia
 echo "Removed Cydia.app!"
 
 echo "PLEASE GO TO SETTINGS IMMEDIATLEY AND USE ERASE ALL CONTENTS AND SETTINGS! THIS PACKAGE ONLY DOES HALF OF THE WORK NEEDED. PLEASE DO THIS!"
