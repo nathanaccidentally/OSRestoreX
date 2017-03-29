@@ -98,8 +98,8 @@ rm -r /Library/Themes
 echo "Removed Cydia.log and themes."
 
 echo "Running final step, removing Cydia and leftover files."
-em -R /Applications/Cydia.app
-rm -R /var/lib/cydia
+rm -r /Applications/Cydia.app
+rm -r /var/lib/cydia
 echo "Removed Cydia.app!"
 
 tput bold
