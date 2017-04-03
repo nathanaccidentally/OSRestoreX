@@ -6,9 +6,14 @@ You can grab OSRestoreX from Cydia https://repo.jailbreakhub.org.
 ## Steps for installation:
 OSRestore does all the heavy lifting for you, so all you need to do is follow these easy steps:
 
-1. Install OSRestore (Will get everything set up for a restore. This can take up to 5 minutes so be paitent.)
-2. Go into settings app and 'Erase all Content and Settings'
-3. Enjoy your freshly restored device on a Jailbreakable firmware!
+1. Install iCleaner
+2. Uninstall Cydia Substrate
+3. Run iCleaner
+4. Now click the "+" in iCleaner, then preference files, then remove all of them.
+5. Uninstall iCleaner
+6. Install OSRestore (Will get everything set up for a restore. This can take up to 5 minutes so be paitent.)
+7. Go into settings app and 'Erase all Content and Settings'
+8. Enjoy your freshly restored device on a Jailbreakable firmware!
 
 This will remove all tweaks from your device and reverse stashing by Coolstars Stashing for 9.3.3-10. It will do quite a bit to remove all un-needed files from your device to make for a fresher install as best as it can. It will also remove mobilesubstrate from your device so dpkg should handle removal of leftover files. (Including Anemone themes and their data.)
 
