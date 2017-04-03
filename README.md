@@ -1,7 +1,7 @@
 # OSRestoreX and Termianl
 A semi-restore Alternative for iOS 10.
 
-Install from Cydia https://repo.jailbreakhub.org.
+You can grab OSRestoreX from Cydia https://repo.jailbreakhub.org.
 
 ## Steps for installation:
 OSRestore does all the heavy lifting for you, so all you need to do is follow these easy steps:
