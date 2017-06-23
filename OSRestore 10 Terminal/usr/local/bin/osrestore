@@ -23,7 +23,7 @@ fi
 
 echo "Done! Moving on to the actual erase!"
 
-echo "THIS IS YOUR LAST CHANCE TO CLOSE CYDIA WITHOUT ERASING. YOU HAVE 5 SECONDS."
+echo "THIS IS YOUR LAST CHANCE TO CLOSE TERMINAL/SSH WITHOUT ERASING. YOU HAVE 5 SECONDS."
 sleep 5
 
 echo "Starting erase…"
@@ -93,13 +93,14 @@ done
 echo "This should have removed all jailbreak applications except Cydia"
 
 echo "Removing any other temporary files caused by Cydia and other tweaks."
-rm /tmp/cydia.log
+rm -r /tmp/cydia.log
 rm -r /Library/Themes
 echo "Removed Cydia.log and themes."
 
 echo "Running final step, removing Cydia and leftover files."
 rm -r /Applications/Cydia.app
 rm -r /var/lib/cydia
+rm -r /usr/libexec/cydia
 echo "Removed Cydia.app!"
 
 tput bold
