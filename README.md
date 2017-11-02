@@ -1,17 +1,17 @@
-# OSRestoreX and Termianl
-A semi-restore Alternative for iOS 10.
+# OSRestoreX and Terminal
+A semi-restore Alternative for Jailbroken iOS devices.
 
-You can grab OSRestoreX from Cydia https://repo.jailbreakhub.org.
+You can build OSRestoreX yourself or use the Mac version via SSH.
 
 ## Steps for installation:
-OSRestore does all the heavy lifting for you, so all you need to do is follow these easy steps:
+OSRestoreX does all the heavy lifting for you, so all you need to do is follow these easy steps:
 
 1. Install iCleaner
 2. Uninstall Cydia Substrate
 3. Run iCleaner
 4. Now click the "+" in iCleaner, then preference files, then remove all of them.
 5. Uninstall iCleaner
-6. Install OSRestore (Will get everything set up for a restore. This can take up to 5 minutes so be paitent.)
+6. Install OSRestoreX (This will get everything set up for a restore. This can take up to 5 minutes so be paitent.)
 7. Go into settings app and 'Erase all Content and Settings'
 8. Enjoy your freshly restored device on a Jailbreakable firmware!
 
@@ -20,7 +20,7 @@ This will remove all tweaks from your device and reverse stashing by Coolstars S
 ## Command Line Utility:
 Also on this page is command line utility; This can be run over SSH or via MTerminal. It is exactly the same as the default package but it can be triggered when you'd prefer rather than having to run it immideatley.
 
-**But be warned:** This can be triggered by any ol' Cydia tweak with a postinst script so I'd be **VERY** careful if you install this although I reccomend you don't. You can trigger OSRestore by typing `osrestore` from the command line.
+**But be warned:** This can be triggered by any ol' Cydia tweak with a postinst script so I'd be **VERY** careful if you install this, although I reccomend you don't. You can trigger OSRestore by typing `osrestore` from the command line.
 
 ## MacOS OSRestoreX
 This version of OSRestoreX can be run entirley from MacOS with no device interaction at all. Can be helpful for people who are having issues or just would prefer to use OSRestoreX on a Mac.
